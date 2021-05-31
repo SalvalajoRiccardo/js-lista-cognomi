@@ -1,11 +1,13 @@
 var nUtente = prompt("Quale è il tuo cognome?");
 
-console.log(nUtente);
+var nUtenteCap =  nUtente.charAt(0).toUpperCase() + nUtente.slice (1)
 
-var cognomi = ['bianchi', 'neri', 'rossi', 'verdi', 'gialli'];
+console.log(nUtenteCap);
 
-cognomi.push(nUtente);
+var cognomi = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
+
+cognomi.push(nUtenteCap);
 cognomi.sort();
 console.log(cognomi);
 
-document.getElementById("risultato").innerHTML = "posizione: " + (cognomi.indexOf(nUtente) + 1);
+document.getElementById("risultato").innerHTML = "posizione: " + (cognomi.indexOf(nUtenteCap) + 1);
