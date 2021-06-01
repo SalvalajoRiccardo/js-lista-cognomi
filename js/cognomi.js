@@ -8,6 +8,13 @@ var cognomi = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
 
 cognomi.push(nUtenteCap);
 cognomi.sort();
-console.log(cognomi);
 
-document.getElementById("risultato").innerHTML = "posizione: " + (cognomi.indexOf(nUtenteCap) + 1);
+for (var i = 0; i < cognomi.length; i++) {
+    document.getElementById("risultato").innerHTML += cognomi[i] + '<br>';
+    if (cognomi[i] == nUtenteCap) {
+        document.getElementById("posizione").innerHTML = 'posizione: ' + (i + 1) ;
+    }
+}
+
+
+// document.getElementById("risultato").innerHTML = "posizione: " + (cognomi.indexOf(nUtenteCap) + 1);
